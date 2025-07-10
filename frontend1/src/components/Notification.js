@@ -8,7 +8,7 @@ const Notification = () => {
 
   useEffect(() => {
     if (user && token) {
-      const s = io('http://localhost:5000');
+      const s = io(process.env.REACT_APP_SOCKET_URL);
       s.emit('join', user.id);
       s.on('notification', (notification) => {
         setNotifications((prev) => [notification, ...prev]);
