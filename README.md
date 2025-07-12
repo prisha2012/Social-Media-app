@@ -1,2 +1,2 @@
 See the Live project
-https://social-media-app-1-poal.onrender.com
+https://social-media-app-pfm2.vercel.app/
