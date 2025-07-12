@@ -13,7 +13,10 @@ const server = http.createServer(app);
 const io = socketIo(server, { cors: { origin: '*' } });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://social-media-app-pfm2.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to MongoDB
